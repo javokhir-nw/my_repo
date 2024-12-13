@@ -11,6 +11,7 @@ def home(request):
     ctx={'ctg':ctg,
          'product':product}
     return render(request,'index.html',ctx)
+
 def products(request, slug=None):
     ctg=Category.objects.all()
     category=Category.objects.get(slug=slug)
@@ -22,6 +23,7 @@ def products(request, slug=None):
 def register(request):
     ctx={}
     return render(request,'register.html',ctx)
+
 
 def single(request, pk=None):
     ctg=Category.objects.all()
